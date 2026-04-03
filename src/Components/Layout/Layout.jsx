@@ -1,24 +1,20 @@
 import { Link } from 'react-router';
-
+import { HiBars3 } from "react-icons/hi2";
 import { Outlet } from 'react-router';
-import FinanceContext from '../Provider/FinanceContext';
-import { useContext } from 'react';
+
+
 
 const Layout = () => {
-  const { role } = useContext(FinanceContext);
+
 
   return (
     <div className="drawer lg:drawer-open">
       <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content flex flex-col bg-base-200 min-h-screen p-8">
-        {/* Navbar for Mobile */}
-        <label htmlFor="my-drawer" className="btn btn-primary drawer-button lg:hidden mb-4">Open Menu</label>
+      <div className="drawer-content bg-base-200 min-h-screen p-4">
+      
+        <label htmlFor="my-drawer" className="btn btn-primary drawer-button lg:hidden mb-4"><HiBars3></HiBars3></label>
         
-        {/* Page Content Rendered Here */}
-        <header className="mb-8">
-          <h1 className="text-2xl font-bold">Financial Dashboard</h1>
-          <div className="badge badge-secondary uppercase">{role} Mode</div>
-        </header>
+      
         
         <Outlet></Outlet>
       </div>

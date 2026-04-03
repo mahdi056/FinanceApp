@@ -8,6 +8,8 @@ import { RouterProvider } from "react-router/dom";
 import Layout from './Components/Layout/Layout';
 import Overview from './Components/Pages/Overview';
 import { FinanceProvider } from './Components/Provider/FinanceContext';
+import Role from './Components/Pages/Role';
+import Transactions from './Components/Pages/Transactions';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +19,14 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Overview></Overview>
+      },
+      {
+        path: '/roles',
+        element: <Role></Role>
+      },
+      {
+        path: '/transactions',
+        element: <Transactions></Transactions>
       }
     ]
   },
