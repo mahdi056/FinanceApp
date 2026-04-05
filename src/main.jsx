@@ -10,6 +10,7 @@ import Overview from './Components/Pages/Overview';
 import { FinanceProvider } from './Components/Provider/FinanceContext';
 import Role from './Components/Pages/Role';
 import Transactions from './Components/Pages/Transactions';
+import Insights from './Components/Pages/Insights';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: '/transactions',
         element: <Transactions></Transactions>
+      },
+      {
+        path: '/insights',
+        element: <Insights></Insights>
       }
     ]
   },

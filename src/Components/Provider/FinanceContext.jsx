@@ -7,9 +7,9 @@ export const FinanceProvider = ({ children }) => {
   const [transactions, setTransactions] = useState([
     { id: 1, date: "2026-03-01", amount: 5000, category: "Salary", type: "income" },
     { id: 2, date: "2026-03-05", amount: 120, category: "Food", type: "expense" },
-    { id: 3, date: "2026-03-05", amount: 1200, category: "Bill", type: "expense" },
-    { id: 4, date: "2026-03-05", amount: 1020, category: "Food", type: "expense" },
-    { id: 5, date: "2026-03-05", amount: 320, category: "Tax", type: "expense" },
+    { id: 3, date: "2026-03-07", amount: 1200, category: "Bill", type: "expense" },
+    { id: 4, date: "2026-03-10", amount: 1020, category: "Food", type: "expense" },
+    { id: 5, date: "2026-03-12", amount: 320, category: "Tax", type: "expense" },
     
   ]);
 
