@@ -2,7 +2,7 @@
 
 ### Finance App
 
-## Tech Stach Used
+## Tech Stack Used
 
 ### React, Tailwind CSS, Recharts, Context Api, React Icons
 
