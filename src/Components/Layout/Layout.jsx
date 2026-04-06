@@ -1,11 +1,16 @@
 import { Link } from 'react-router';
 import { HiBars3 } from "react-icons/hi2";
 import { Outlet } from 'react-router';
+import { useContext } from 'react';
+import FinanceContext from '../Provider/FinanceContext';
 
 
 
 const Layout = () => {
 
+  const {theme, toggleTheme} = useContext(FinanceContext);
+
+ 
 
   return (
     <div className="drawer lg:drawer-open">
@@ -28,6 +33,19 @@ const Layout = () => {
           <li><Link to="/insights">Insights</Link></li>
           <div className="divider">Settings</div>
           <li><Link to="/roles">Role Settings</Link></li>
+
+          <div className="divider">Theme</div>
+          <li className="flex flex-row items-center justify-between px-4">
+            <span className="text-sm font-medium">
+              {theme === 'light' ? 'Light Mode' : 'Dark Mode'}
+            </span>
+            <input 
+              type="checkbox" 
+              className="toggle toggle-primary toggle-sm" 
+              checked={theme === "dark"}
+              onChange={toggleTheme} 
+            />
+          </li>
         </ul>
       </div>
     </div>

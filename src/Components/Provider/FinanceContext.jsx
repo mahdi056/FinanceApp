@@ -1,9 +1,10 @@
-import { createContext, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 
 const FinanceContext = createContext();
 
 export const FinanceProvider = ({ children }) => {
   const [role, setRole] = useState('user'); 
+  const [theme, setTheme] = useState('light');
   const [transactions, setTransactions] = useState([
     { id: 1, date: "2026-03-01", amount: 5000, category: "Salary", type: "income" },
     { id: 2, date: "2026-03-05", amount: 120, category: "Food", type: "expense" },
@@ -13,8 +14,17 @@ export const FinanceProvider = ({ children }) => {
     
   ]);
 
+useEffect(()=> {
+  document.documentElement.setAttribute('data-theme', theme)
+},[theme]);
+
+const toggleTheme = () => {
+    setTheme(prev => prev === 'light' ? 'dark' : 'light');
+}
+
+
   return (
-    <FinanceContext.Provider value={{ role, setRole, transactions, setTransactions }}>
+    <FinanceContext.Provider value={{ role, setRole, transactions, setTransactions, theme, toggleTheme }}>
       {children}
     </FinanceContext.Provider>
   );

@@ -17,7 +17,7 @@ const Transactions = () => {
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-col md:flex-row justify-between items-center bg-white p-6 rounded-xl shadow-sm gap-4">
+      <div className="flex flex-col md:flex-row justify-between items-center p-6 rounded-xl shadow-sm gap-4">
         <h2 className="text-xl font-bold">Financial History</h2>
         
         <div className="flex gap-2">
@@ -45,7 +45,7 @@ const Transactions = () => {
         {role === 'admin' ? (
           <button className="btn btn-primary btn-sm">+ Add New</button>
         ) : (
-          <div className="text-black badge badge-outline">Transactions</div>
+          <div className="badge badge-outline">Transactions</div>
         )}
       </div>
 
